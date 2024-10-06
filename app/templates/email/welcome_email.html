@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido a mi aplicación</title>
+    <style>
+        .email-body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            /* background-color: #f4f4f4; */
+            color: #333;
+            line-height: 1.6;
+            
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            /* background-color: #fff; */
+            /* background-image: url("https://res.cloudinary.com/dbwmesg3e/image/upload/v1723120005/TurismoApp/logoCCTDC_lugwff.png");
+            background-size: cover; */
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            font-size: 0.9em;
+            text-align: center;
+            /* background-color: #007bff; */
+            color: #333;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+        }
+        /* .email-title{
+            background-color: #cecece;
+        } */
+        .email-content {
+            padding: 20px;
+        }
+        .email-footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .logo {
+            width: 200px;
+            left: 0;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="email-body">
+    <div class="email-container">
+        <div class="email-header">
+            <img src="https://res.cloudinary.com/dbwmesg3e/image/upload/v1723120005/TurismoApp/logoCCTDC_lugwff.png" alt="Logo" class="logo">
+            <h2 class="email-title">Bienvenido!</h2>
+        </div>
+        <hr>
+        <div class="email-content">
+            <p>Hola, {{ first_name }}, te damos la bienvenida a nuestra aplicación para que aproveches los mejores beneficios!</p>
+            <p>La credencial adjunta corresponde a:</p>
+            <ul>
+                <li>Nombre: {{ first_name }}</li>
+                <li>Email: {{ email }}</li>
+            </ul>
+            <p>Gracias por unirte!</p>
+        </div>
+        <div class="email-footer">
+            <p>&copy; 2024 - Todos los derechos reservados</p>
+            <p>Cámara de Comercio, Turismo y Desarrollo de Cobquecura, A.G. (CCTD Cobquecura)</p>
+        </div>
+    </div>
+</body>
+</html>

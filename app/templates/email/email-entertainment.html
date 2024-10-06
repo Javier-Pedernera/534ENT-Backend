@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        .email-header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        .email-header img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .email-body {
+            padding: 20px;
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+        .email-body h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .email-body p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .email-footer {
+            text-align: center;
+            padding: 15px;
+            color: #e9ecef;
+            font-size: 14px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="https://res.cloudinary.com/dqxqommok/image/upload/v1728231934/Copia_de_loader_534_2_pdvluo.png" alt="Header Image">
+        </div>
+        <div class="email-body">
+            <h3>{{ title }}</h3> 
+            <p>Hello, 534!</p>
+            <p><strong>Nombre:</strong> {{ username }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Empresa:</strong> {{ company }}</p> 
+            <p><strong>Mensaje:</strong> {{ message }}</p>
+        </div>
+        <div class="email-footer">
+            <p>© 2023 534 Entertainment - All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>
