@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  title: ENT534 API
+  description: API de 534 Entertainment. 
+  version: 1.0.0
+
+paths:
+  /send-email-534ent:
+    post:
+      summary: Enviar un email
+      description: Este endpoint envía un email basado en la información proporcionada en el cuerpo de la solicitud. Se debe elegir el destinatario de acuerdo a la vertical que está enviando el formulario. Email y buzón ya no muero ya no más.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                recipient:
+                  type: string
+                  description: El destinatario del email.
+                subject:
+                  type: string
+                  description: El asunto del email.
+                username:
+                  type: string
+                  description: El nombre del usuario.
+                email:
+                  type: string
+                  description: El email del usuario.
+                company:
+                  type: string
+                  description: El nombre de la empresa.
+                message:
+                  type: string
+                  description: El mensaje del email.
+                title:
+                  type: string
+                  description: El título del email.
+              required:
+                - recipient
+                - subject
+                - username
+                - email
+                - company
+                - message
+                - title
+      responses:
+        '200':
+          description: Email enviado exitosamente.
+        '400':
+          description: Faltan campos requeridos en el cuerpo de la solicitud.
+        '500':
+          description: Error interno del servidor al intentar enviar el email.
