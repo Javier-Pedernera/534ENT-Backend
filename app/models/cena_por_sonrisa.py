@@ -10,7 +10,7 @@ class CenaPorUnaSonrisa(db.Model):
     apellido = db.Column(db.String(60), nullable=False)  # Campo para el apellido
     direccion = db.Column(db.String(120))
     pais_id = db.Column(db.Integer, db.ForeignKey('countries.id'))
-    cena_asistira = db.Column(db.String(50))
+    cena_asistira = db.Column(db.Boolean)
     tipo_comida = db.Column(db.String(50))
     cantidad_invitados = db.Column(db.Integer)
     nombres_acompanantes = db.Column(db.Text)
