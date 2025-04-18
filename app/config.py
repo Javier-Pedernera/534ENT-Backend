@@ -6,7 +6,7 @@ load_dotenv()
 # print(os.getenv('SQLALCHEMY_DATABASE_URI'))
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY')
-    # SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
     
     # Configuración de SMTP
     MAIL_SERVER = os.getenv('SMTP_SERVER')
