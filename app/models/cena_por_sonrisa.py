@@ -11,6 +11,7 @@ class CenaPorUnaSonrisa(db.Model):
     direccion = db.Column(db.String(120))
     pais_id = db.Column(db.Integer, db.ForeignKey('countries.id'))
     cena_asistira = db.Column(db.Boolean)
+    cena_name = db.Column(db.String(100))
     tipo_comida = db.Column(db.String(50))
     cantidad_invitados = db.Column(db.Integer)
     nombres_acompanantes = db.Column(db.Text)
@@ -29,6 +30,7 @@ class CenaPorUnaSonrisa(db.Model):
             'direccion': self.direccion,
             'pais': self.pais.serialize() if self.pais else None,
             'cena_asistira': self.cena_asistira,
+            'cena_name': self.cena_name,
             'tipo_comida': self.tipo_comida,
             'cantidad_invitados': self.cantidad_invitados,
             'nombres_acompanantes': self.nombres_acompanantes,
