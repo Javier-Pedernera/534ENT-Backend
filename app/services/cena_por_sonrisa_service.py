@@ -25,7 +25,8 @@ def guardar_formulario_cena(data):
             nombres_acompanantes=data.get('nombres_acompanantes', ''),
             detalles=data.get('detalles', ''),
             email=data['email'],
-            pais_id=pais.id
+            pais_id=pais.id,
+            cena_name=data.get('cena_name', '')
         )
 
         db.session.add(reserva)
